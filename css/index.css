@@ -2,6 +2,20 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -144,6 +158,8 @@ body {
   display: flex;
   justify-content: space-between;
   width: 40%;
+  font-family: Open-Sans, Sans-serif;
+  font-size: 1.5rem;
 }
 .herodiv {
   display: flex;
@@ -155,40 +171,68 @@ hr {
 }
 h1 {
   font-size: 3rem;
+  font-family: Open-Sans, Sans-serif;
 }
 h2 {
   font-size: 2.5rem;
+  font-family: Open-Sans, Sans-serif;
 }
 h3 {
   font-size: 2rem;
+  font-family: Open-Sans, Sans-serif;
 }
 p {
   font-size: 1rem;
+  font-family: Roboto, Sans-serif;
 }
 .hero {
   display: flex;
   align-items: flex-start;
   width: 100%;
   flex-direction: column;
-  background-color: gainsboro;
+  background-color: #E9ECEF;
+  box-shadow: 2px 2px #FAFAFB;
+  border-radius: 4px;
   margin-top: 2%;
+  padding: 2%;
 }
 .hero button {
   font-size: 1rem;
   background: 1px black solid;
-  background-color: lightgreen;
+  background-color: #808080;
+  color: white;
+  padding: 0.75%;
   border-radius: 5px;
+  margin-top: 1%;
 }
 .hero img {
-  width: 60%;
+  width: 40%;
+  margin-top: 1%;
+}
+.hero h1 {
+  margin-top: 1%;
+}
+.hero h3 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 1.5rem;
+}
+.hero hr {
+  margin-bottom: 1%;
 }
 .maincontainer {
+  margin-top: 2%;
   display: flex;
   flex-direction: row;
 }
 .maincontainer div {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2%;
+}
+.maincontainer div a {
+  border: 1px solid black;
+  margin: 0.5% 0 0 0;
 }
 .listen {
   width: 50%;
@@ -208,4 +252,8 @@ footer {
 }
 footer a {
   color: white;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
