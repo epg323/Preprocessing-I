@@ -16,6 +16,14 @@
   font-display: swap;
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
 }
+.nav-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation-flex {
+  display: flex;
+  justify-content: space-between;
+}
 html,
 body,
 div,
@@ -161,9 +169,49 @@ body {
   font-family: Open-Sans, Sans-serif;
   font-size: 1.5rem;
 }
+@media (max-width: 500px) {
+  .navdiv nav {
+    font-size: 40px;
+  }
+}
 .herodiv {
   display: flex;
   justify-content: center;
+}
+.herodiv .hero {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  background-color: #E9ECEF;
+  box-shadow: 2px 2px #FAFAFB;
+  border-radius: 4px;
+  margin-top: 2%;
+  padding: 2%;
+}
+.herodiv .hero button {
+  font-size: 1rem;
+  background: 1px black solid;
+  background-color: #808080;
+  color: white;
+  padding: 0.75%;
+  border-radius: 5px;
+  margin-top: 1%;
+}
+.herodiv .hero img {
+  width: 40%;
+  margin-top: 1%;
+}
+.herodiv .hero h1 {
+  margin-top: 1%;
+}
+.herodiv .hero h3 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 1.5rem;
+}
+.herodiv .hero hr {
+  margin-bottom: 1%;
 }
 hr {
   width: 100%;
@@ -182,43 +230,8 @@ h3 {
   font-family: Open-Sans, Sans-serif;
 }
 p {
-  font-size: 1rem;
-  font-family: Roboto, Sans-serif;
-}
-.hero {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  flex-direction: column;
-  background-color: #E9ECEF;
-  box-shadow: 2px 2px #FAFAFB;
-  border-radius: 4px;
-  margin-top: 2%;
-  padding: 2%;
-}
-.hero button {
-  font-size: 1rem;
-  background: 1px black solid;
-  background-color: #808080;
-  color: white;
-  padding: 0.75%;
-  border-radius: 5px;
-  margin-top: 1%;
-}
-.hero img {
-  width: 40%;
-  margin-top: 1%;
-}
-.hero h1 {
-  margin-top: 1%;
-}
-.hero h3 {
-  margin-top: 1%;
-  margin-bottom: 1%;
   font-size: 1.5rem;
-}
-.hero hr {
-  margin-bottom: 1%;
+  font-family: Roboto, Sans-serif;
 }
 .maincontainer {
   margin-top: 2%;
@@ -229,13 +242,11 @@ p {
   display: flex;
   flex-direction: column;
   margin-bottom: 2%;
+  width: 50%;
 }
 .maincontainer div a {
   border: 1px solid black;
   margin: 0.5% 0 0 0;
-}
-.listen {
-  width: 50%;
 }
 .history {
   width: 100%;
@@ -263,10 +274,10 @@ a {
 .divskills h3 {
   margin-bottom: 1%;
 }
-.skills tr {
+.divskills .skills tr {
   border: 1px solid lightgray;
 }
-.skills td {
+.divskills .skills td {
   padding: 2%;
   font-size: 1rem;
 }
