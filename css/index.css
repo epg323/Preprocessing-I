@@ -158,6 +158,12 @@ body {
   font-size: 16px;
   padding: 1% 2%;
 }
+@media (max-width: 500px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+}
 .navdiv {
   display: flex;
   justify-content: flex-end;
@@ -168,11 +174,6 @@ body {
   width: 40%;
   font-family: Open-Sans, Sans-serif;
   font-size: 1.5rem;
-}
-@media (max-width: 500px) {
-  .navdiv nav {
-    font-size: 40px;
-  }
 }
 .herodiv {
   display: flex;
