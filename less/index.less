@@ -3,7 +3,24 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@nicebgcolor: #808080;
+@herobg:#E9ECEF;
+@heroshadow: 2px 2px #FAFAFB;
+@font-veryhigh: 3rem;
+@font-high: 2.5rem;
+@font-medhigh: 2rem;
+@font-medium:1.5rem;
+@font-low:1rem;
 
+.nav-flex{
+	display:flex;
+	justify-content: flex-end;
+}
+.navigation-flex{
+	display:flex;
+	justify-content: space-between;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,11 +66,144 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@body-text: Roboto, Sans-serif;
+@title-text: Open-Sans ,Sans-serif;
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 16px;
+	padding: 1% 2%;
+	@media (max-width: 500px){
+		font-size: 8px;
+	}
 }
 
+.navdiv {
+	.nav-flex();
+	nav{
+		.navigation-flex();
+		width:40%;
+		font-family: @title-text;
+		font-size: @font-medium;
+	}
+}
+.herodiv{
+	display: flex;
+	justify-content: center;
+	.hero{
+		display: flex;
+		align-items: flex-start;
+		width:100%;
+		flex-direction: column;
+		background-color: @herobg;
+		box-shadow: @heroshadow;
+		border-radius: 4px;
+		margin-top: 2%;
+		padding: 2%;
+		button{
+			font-size: @font-low;
+			background: 1px black solid;
+			background-color: @nicebgcolor;
+			color:white;
+			padding: .75%;
+			border-radius:5px;
+			margin-top:1%;
+		}
+		img{
+			width: 40%;
+			margin-top:1%;
+		}
+		h1{
+			margin-top:1%;
+		}
+		h3{
+			margin-top:1%;
+			margin-bottom:1%;
+			font-size:@font-medium;
+		}
+		hr{
+			margin-bottom:1%;
+		}
+	
+	}
+}
+hr{
+	width:100%;
+	border-top:.5px solid gray;
+}
+h1{
+	font-size: @font-veryhigh;
+	font-family: @title-text;
+}
+h2{
+	font-size: @font-high;
+	font-family: @title-text;
+}
+h3{
+	font-size: @font-medhigh;
+	font-family: @title-text;
+}
+p {
+	font-size: @font-medium;
+	font-family: @body-text;
+}
+
+.maincontainer{
+	margin-top:2%;
+	display: flex;
+	flex-direction: row;
+	div{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2%;
+		width: 50%;
+		a{
+			border:1px solid black;
+			margin:.5% 0 0 0;
+		}
+	}
+
+}
+
+
+.history{
+	width:100%;
+	margin:2% 0;
+	text-align: center;
+	tr:nth-child(even){
+		background-color: lightgray;
+	}
+}
+
+footer{
+	background-color: gray;
+	padding: 2% 0;
+	text-align: center;
+	a{
+		color:white;
+	}
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.divskills{
+	width:60%;
+	h3{
+		margin-bottom:1%;
+	}
+	.skills{
+		//border: 1px solid black;
+		tr{
+			border: 1px solid lightgray;
+		}
+		td{
+			padding:2%;
+			font-size: @font-low;
+		}
+	
+	}
+}
